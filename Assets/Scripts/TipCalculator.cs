@@ -8,7 +8,7 @@ public class TipCalculator : MonoBehaviour
     //Tip is 20% or based on what the user wants
     //Calculate total amount
     public double bill;
-    public double tip;
+    public double tipPercentage;
     private double totalAmount;
     private double calculatedTip;
 
@@ -16,10 +16,10 @@ public class TipCalculator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        calculatedTip = bill * (tip / 100);
+        calculatedTip = bill * (tipPercentage / 100);
         totalAmount = bill + calculatedTip;
     //Your bill is: and your tip amount is : so you owe: totalAmount
-        Debug.Log("Your Bill is: " + bill + "\n" + "Tip is: " + tip + "\n" + "Total Price: " + totalAmount);
+        Debug.Log("Your Bill is: " + bill + "\n" + "Tip is: " + tipPercentage + "\n" + "Total Price: " + totalAmount);
     }
 
 
